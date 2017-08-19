@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1250"><title>C</title></head><body>
+<h1 style="text-align: center;">Zadania do wykonania</h1>
+
+<b>Zadanie 1  - </b><b>Konta bankowe</b> (4 punkty)<br>
+<br>
+Napisać program, który symuluje 
+operacje na kontach bankowych.<br>
+Konta są obiektami klasy Account. Każde konto 
+ma aktualny stan (balance) i można:<br>
+
+<ul>
+<li>wplacać pieniądze (metoda deposit())
+</li><li>wypłacać pieniądze (metoda withdraw())
+</li><li>przelewać na inne konto (metoda transfer(...)) 
+</li><li>dodawać do stanu konta odsetki w skali rocznej (metoda 
+addInterest()).</li>
+</ul>
+Stopa oprocentowania jest wspólna dla wszystkich kont i 
+ustalana za pomocą metody setInterestRate(...).<br>
+<br>
+Konta posiadają klienci 
+banku (obiekty klasy BankCustomer). W roli klienta występuje osoba (obiekt klasy 
+Person).<br>
+<br>
+Dostarczyć takich definicji w/w klas, aby poniższy program:<br>
+<pre>public class BankingTest {<br><br>  public static void main(String[] args) {<br><br>    Person janP = new Person("Jan"),<br>           alaP = new Person("Ala");<br><br>    BankCustomer jan = new BankCustomer(janP);<br>    BankCustomer ala = new BankCustomer(alaP);<br><br>    jan.getAccount().deposit(1000);<br>    ala.getAccount().deposit(2000);<br>    jan.getAccount().transfer(ala.getAccount(), 500);<br>    ala.getAccount().withdraw(1000);<br><br>    System.out.println(jan);<br>    System.out.println(ala);<br><br>    Account.setInterestRate(4.5);<br>    jan.getAccount().addInterest();<br>    ala.getAccount().addInterest();<br><br>    System.out.println(jan);<br>    System.out.println(ala);<br>  }<br>} </pre>
+<br>
+wyprowadził następującą informację:<br>
+<br>
+Klient: Jan stan konta 
+500.0<br>
+Klient: Ala stan konta 1500.0<br>
+Klient: Jan stan konta 
+522.5<br>
+Klient: Ala stan konta 1567.5<br>
+<br>
+<br>
+<hr style="width: 100%; height: 2px;"><br>
+<span style="font-weight: bold;">Zadanie 2 - wyszukiwanie w plikach (4 punkty)</span><br>
+<b><br><br></b>Napisać program, który wczytuje<b> </b>plik o 
+nazwie "Test.java" z kodem źródłowym Javy i wyszukuje w nim instrukcje 
+<span style="font-style: italic; font-weight: bold;">if</span>  oraz  napisy 
+"wariant". Wyniki dzialania programu w postaci:<br>
+<br>
+Liczba instrukcji if: 
+n<br>
+Liczba napisów: m<br>
+<br>
+należy wypisać na konsoli<br>
+<br>
+</body></html>
